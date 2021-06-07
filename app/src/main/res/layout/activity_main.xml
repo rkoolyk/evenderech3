@@ -33,7 +33,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="hint" />
+                    android:hint="@string/enter_an_ip_address" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -46,27 +46,68 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="hint" />
+                    android:hint="@string/enter_a_flightgear_port_number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="211dp"
                 android:layout_height="81dp"
-                android:text="Button"
+                android:text="@string/connect"
                 tools:ignore="DuplicateIds,MissingConstraints"
                 tools:layout_editor_absoluteX="75dp"
                 tools:layout_editor_absoluteY="311dp" />
 
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:orientation="horizontal">
 
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="0dp" />
+
+                <view.evenderech3.joystick
+                    android:id="@+id/joystick"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBarThrottle"
+                    android:layout_width="260dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="164dp"
+                    android:layout_marginRight="164dp"
+                    android:layout_marginBottom="152dp"
+                    android:progress="0"
+                    android:rotation="270"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/joystick" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="301dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="0dp" />
             <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="766dp"
+                android:id="@+id/seekBarRudder"
+                android:layout_width="300dp"
                 android:layout_height="57dp"
                 tools:ignore="DuplicateIds,MissingConstraints"
                 tools:layout_editor_absoluteX="108dp"
                 tools:layout_editor_absoluteY="1035dp" />
+
+            </LinearLayout>
 
 
         </LinearLayout>

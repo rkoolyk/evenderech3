@@ -1,4 +1,4 @@
-package com.example.evenderech3
+package view.evenderech3
 
 import org.junit.Test
 
