@@ -31,9 +31,11 @@
                 tools:layout_editor_absoluteY="76dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ip_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_an_ip_address" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -44,6 +46,7 @@
                 tools:layout_editor_absoluteY="190dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/port"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_a_flightgear_port_number" />
@@ -51,10 +54,11 @@
 
             <Button
                 android:id="@+id/button"
+                android:onClick="connect"
                 android:layout_width="211dp"
                 android:layout_height="81dp"
                 android:text="@string/connect"
-                tools:ignore="DuplicateIds,MissingConstraints"
+                tools:ignore="DuplicateIds,MissingConstraints,OnClick"
                 tools:layout_editor_absoluteX="75dp"
                 tools:layout_editor_absoluteY="311dp" />
 
@@ -107,7 +111,8 @@
                 tools:layout_editor_absoluteX="108dp"
                 tools:layout_editor_absoluteY="1035dp" />
 
-            </LinearLayout>
+
+        </LinearLayout>
 
 
         </LinearLayout>
